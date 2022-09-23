@@ -11,6 +11,7 @@
   --color-2: #e4c1b1;
   --bg-color: #f3f3f3;
   --transition: all 400ms ease;
+  ---color-gray: gray;
 }
 
 * {
@@ -45,11 +46,31 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: absolute;
-  top: 10px;
+  position: fixed;
+  top: 0px;
   width: 100%;
+  height: 13vh;
+  background: transparent;
+  z-index: 99999;
 }
-
+header.window-scroll {
+  background: var(--color-primary-white);
+  -webkit-box-shadow: 0 1rem 1rem rgba(12, 3, 27, 0.1);
+  box-shadow: 0 1rem 1rem rgba(12, 3, 27, 0.1);
+  top: -50%;
+  animation: scrolMenu 0.41s linear forwards;
+}
+@keyframes scrolMenu {
+  to {
+    top: 0;
+  }
+}
+header.window-scroll .menu li a {
+  color: var(--color-primary-one);
+}
+header.window-scroll .resaux a {
+  color: var(--color-primary-one);
+}
 header .logo img {
   width: 150px;
 }
@@ -210,6 +231,7 @@ header .resaux a:hover {
   font-weight: 200;
   letter-spacing: 14px;
   position: relative;
+  padding-bottom: 2rem;
 }
 
 .topProducts .topHead h1 span {
@@ -218,6 +240,45 @@ header .resaux a:hover {
   font-size: 2.5rem;
 }
 
+.topHead .button_messages {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  position: relative;
+}
+.topHead .button_messages::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: var(---color-gray);
+  bottom: -1px;
+}
+.topHead .button_messages button {
+  color: var(---color-gray);
+  text-transform: uppercase;
+  font-size: 17px;
+  letter-spacing: 5px;
+  padding: 2rem 0;
+  transition: var(--transition);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.topcontent .product.active {
+  margin-right: 150px;
+}
+.topHead .button_messages button:hover {
+  border-bottom: 1px solid var(--color-primary-one);
+  color: var(--color-primary-one);
+}
+.topHead .button_messages button:focus {
+  border-bottom: 1px solid var(--color-primary-one);
+  color: var(--color-primary-one);
+}
+/*
 .topcontent {
   display: flex;
   align-items: center;
@@ -225,10 +286,32 @@ header .resaux a:hover {
   flex-wrap: nowrap;
   padding: 1.5rem 8rem;
   gap: 2rem;
-  max-width: 1330px;
+  max-width: 700px;
   margin: 2rem 8rem;
+  overflow: scroll;
+}
+*/
+.topcontent {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 21%;
+  gap: 4rem;
+  margin: 2rem 8rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding: 2rem 0;
+  max-width: 1000px;
+  user-select: none;
+  scrollbar-color: var(--color-jaune-aliance);
+}
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 7rem 1rem;
 }
 
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
 .topcontent .product {
   background: var(--color-primary-white);
   width: 250px;
@@ -239,6 +322,10 @@ header .resaux a:hover {
   flex-direction: column;
   cursor: pointer;
   position: relative;
+}
+
+.filter-item .fliterDiv.delete {
+  display: none;
 }
 
 .topcontent .product .details h2 {
@@ -345,11 +432,11 @@ header .resaux a:hover {
   padding: 130px 75px 130px 75px;
 }
 
-.bestProducts .testimonials{
-  background-image: url(../image/luchiana6.webp)
+.bestProducts .testimonials {
+  background-image: url(../image/luchiana6.webp);
 }
-.bestProducts .testimonials2{
-  background-image: url(../image/luchiana7.webp)
+.bestProducts .testimonials2 {
+  background-image: url(../image/luchiana7.webp);
 }
 .bestProducts .best2 {
   background-image: url(../image/luchiana2.webp);
@@ -434,7 +521,7 @@ header .resaux a:hover {
   font-weight: 300;
   display: inline-block;
   width: 210px;
-  color: gray;
+  color: var(---color-gray);
 }
 
 .stars {
@@ -459,7 +546,7 @@ header .resaux a:hover {
 .product .price span {
   font-size: 15px;
   text-decoration: line-through;
-  color: gray;
+  color: var(---color-gray);
 }
 
 .product .price p {
@@ -536,7 +623,7 @@ header .resaux a:hover {
 
 .about-section .about_info article {
   text-align: justify;
-  color: gray;
+  color: var(---color-gray);
   padding: 1rem 0.5rem;
   font-size: 17px;
   font-weight: 300;
@@ -558,4 +645,3 @@ header .resaux a:hover {
   background: var(--color-primary-one);
   color: var(--color-primary-white);
 }
-
