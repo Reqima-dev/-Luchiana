@@ -1,5 +1,11 @@
 
 
+//when scroll change navabar 
+
+window.addEventListener('scroll', () => {
+    document.querySelector('header').classList.toggle('window-scroll', window.scrollY > 0);
+})
+
 let index = 0;
 let a = 0;
 let sliderNew = document.getElementsByClassName('sliderN');
@@ -44,13 +50,6 @@ function currentSlide(n) {
     show(index)
 }
 
-
-
-//when scroll change navabar 
-
-window.addEventListener('scroll', () => {
-    document.querySelector('header').classList.toggle('window-scroll', window.scrollY > 0);
-})
 
 // FILTER GAMME PRODUCTS */
 let sortBtn = document.querySelector('.filter-menu').children;
