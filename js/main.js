@@ -1,94 +1,48 @@
-let sortBtn = document.querySelector('.filter-menu').children;
-let sortItem = document.querySelector('.filter-item').children;
 
 
+let index = 0;
+let a = 0;
+let sliderNew = document.getElementsByClassName('sliderN');
+let line = document.getElementsByClassName('line');
 
-const data = [
-    {
-        slideImg: `<img id="slideImg" src="image/Slide1.jpg">`,
-        titles: `<h1>Nos Produits </h1>`,
-        sous_titles: `<p>   sont fabriqués avec des huiles et beurres végétaux non comédogènes alors dites bye-bye
-        aux comédons.</p>`,
-        btnVoirplus: `<a href="#">voir plus</a>`
-    },
-    {
-        slideImg: `<img id="slideImg" src="image/Slide2.jpg">`,
-        titles: `<h1>Le Saviez-vous ? </h1>`,
-        sous_titles: `<p>Nous disposons d'une GAMME complète de produits de soins corporels conçue pour révéler la beauté de la peau noire.</p>`,
-        btnVoirplus: `<a href="#">voir plus</a>`
-    },
+auto();
 
-    {
-        slideImg: `<img id="slideImg" src="image/Slide3.jpg">`,
-        titles: `<h1>AllianzNature </h1>`,
-        sous_titles: `<p>   Première marque Béninoise de cosmétiques naturels et éthiques avec des savons artisanaux aux formes
-        irrégulières et atypiques dotées d'une légère touche artistique.</p>`,
-        btnVoirplus: `<a href="#">voir plus</a>`
+function show(n) {
+    for (a = 0; a < sliderNew.length; a++) { //slider.lenght=4
+        sliderNew[a].style.display = 'none'
+    }
+    for (a = 0; a < line.length; a++) { //line.lenght=4
+        line[a].className = line[a].className.replace("active");
+    }
 
-    },
-    {
-        slideImg: `<img id="slideImg" src="image/Slide4.jpg">`,
-        titles: `<h1>Nos Produits </h1>`,
-        sous_titles: `<p>   sont fabriqués avec des huiles et beurres végétaux non comédogènes alors dites bye-bye
-        aux comédons.</p>`,
-        btnVoirplus: `<a href="#">voir plus</a>`
-    },
-
-];
-
-const slideImg = document.getElementById('myImageId')
-const titles = document.getElementById('titles')
-const sous_titles = document.getElementById('sous_titles')
-const btnVoirplus = document.getElementById('btnVoirplus')
-
-
-let current = 0;
-change();
-function change() {
-    const currentData = data[current]
-
-    slideImg.innerHTML = currentData.slideImg
-    titles.innerHTML = currentData.titles
-    sous_titles.innerHTML = currentData.sous_titles
-    btnVoirplus.innerHTML = currentData.btnVoirplus
+    sliderNew[n - 1].style.display = ("block");
+    line[n - 1].className += " active"; // add space
 }
 
-let len = data.length;
-let i = 0;
-function sliders() {
-
-    if (i > len - 1) {
-        i = 0;
+function auto() {
+    index++;
+    if (index > sliderNew.length) {
+        index = 1;
     }
-    data[current] = data[i]
-    i++;
-    change();
-    setTimeout('sliders()', 3000)
-};
+    show(index);
+    setTimeout(auto, 4000); //4secondes
+}
 
-
-
-
-/*
-let images = new Array(
-    "image/Slide1.jpg",
-    "image/Slide2.jpg",
-    "image/Slide3.jpg"
-);
-
-let len = images.length;
-let i = 0;
-function sliders() {
-    if (i > len - 1) {
-        i = 0;
+function plusSlide(n) {
+    index += n;
+    if (index > sliderNew.length) {
+        index = 1;
     }
-    slideImg.src = images[i]
-    i++;
-    setTimeout('sliders()', 3000)
-};
+    if (index < 1) {
+        index = sliderNew.length
+    }
+    show(index)
+}
 
-
-*/
+function currentSlide(n) {
+    index = n;
+    show(index)
+}
 
 
 
@@ -97,6 +51,11 @@ function sliders() {
 window.addEventListener('scroll', () => {
     document.querySelector('header').classList.toggle('window-scroll', window.scrollY > 0);
 })
+
+// FILTER GAMME PRODUCTS */
+let sortBtn = document.querySelector('.filter-menu').children;
+let sortItem = document.querySelector('.filter-item').children;
+
 
 for (let i = 0; i < sortBtn.length; i++) {
     sortBtn[i].addEventListener('click', function () {
@@ -120,3 +79,30 @@ for (let i = 0; i < sortBtn.length; i++) {
         }
     });
 }
+
+// Initialize Swiper 
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+
+    // RESPONSIVE BREAKPOINTS
+
+    breakpoints: {
+        // when windows width is > = 600px
+
+        600: {
+            slidesPerView: 2,
+        },
+        // when windows width is > = 1024px
+
+        1024: {
+            slidesPerView: 3,
+        }
+
+    }
+});
+

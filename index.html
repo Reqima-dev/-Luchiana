@@ -12,26 +12,77 @@
     <title>AllianzNature - Beauté & Cosmétiques</title>
 
     <link rel="stylesheet" href="css/styles.css">
+
+    <!---- Lightslider.css-->
+    <link rel="stylesheet" href="css/lightslider.css">
+    <!---Jquerry-->
+    <script type="text/javascript" src="js/jquerry.js"></script>
+    <!---- Lightslider.js-->
+    <script type="text/javascript" src="js/lightslider.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
-<body onload="sliders()">
+<body>
 
     <div class="banner">
         <div class="slider">
-            <span id="myImageId">
+            <div class="container_slide">
+                <div class="slider-container">
+                    <div class="sliderN">
+                        <img src="image/Slide1.jpg">
+                        <div class="content">
+                            <h1>AllianzNature </h1>
+                            <p> Première marque Béninoise de cosmétiques naturels et éthiques avec des savons artisanaux
+                                aux
+                                formes
+                                irrégulières et atypiques dotées d'une légère touche artistique.</p>
+                            <a href="#">voir plus</a>
+                        </div>
 
-            </span>
+                    </div>
+                    <div class="sliderN">
+                        <img src="image/Slide2.jpg">
+                        <div class="content">
+                            <h1>Le Saviez-vous ?</h1>
+                            <p>Nous disposons d'une GAMME complète de produits de soins corporels conçue pour révéler la
+                                beauté
+                                de la peau noire.</p>
+                            <a href="#">voir plus</a>
+                        </div>
+                    </div>
+                    <div class="sliderN">
+                        <img src="image/Slide3.jpg">
+                        <div class="content">
+                            <h1>Nos Produits </h1>
+                            <p> sont fabriqués avec des huiles et beurres végétaux non comédogènes alors dites bye-bye
+                                aux comédons.</p>
+                            <a href="#">voir plus</a>
+                        </div>
+                    </div>
+                    <div class="sliderN">
+                        <img src="image/Slide4.jpg">
+                        <div class="content">
+                            <h1>Je connais ma peau </h1>
+                            <p>prenez 5min et faites le diagnistic de votre peau</p>
+                            <a href="#">voir plus</a>
+                        </div>
+                    </div>
+                    <div class="prev_button" onclick="plusSlide(-1)">&#10094;</div>
+                    <div class="suiv_button" onclick="plusSlide(1)">&#10095;</div>
 
-            <div class="content">
-                <h1 id="titles"></h1>
-                <p id="sous_titles"></p>
-                <button id="btnVoirplus">
-
-                </button>
+                    <div class="lines">
+                        <div class="line" onclick="currentSlide(1)"></div>
+                        <div class="line" onclick="currentSlide(2)"></div>
+                        <div class="line" onclick="currentSlide(3)"></div>
+                        <div class="line" onclick="currentSlide(4)"></div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="overlay">
-
         </div>
     </div>
     <!---- HEADER ----->
@@ -60,25 +111,351 @@
         <div class="topHead">
             <h1>Gamme de<br><span>PRODUITS</span></h1>
             <div class="button_messages filter-menu">
-                <button data-target="Featured" class=" btn active">Featured</button>
-                <button data-target="Popular" class="btn">Popular</button>
-                <button data-target="Category" class="btn">Category</button>
-                <button data-target="Brand" class="btn">Brand</button>
+                <button data-target="pEclat" class=" btn active">Parfait Eclat</button>
+                <button data-target="touspetits" class="btn">Touspetis</button>
+                <button data-target="pEbene" class="btn">Parfait Ebène</button>
+                <button data-target="jouvence" class="btn">Jouvence</button>
             </div>
         </div>
+
         <div class="topcontent filter-item snaps-inline">
-            <div class="product fliterDiv" data-item="Featured">
+
+            <div class="product fliterDiv" data-item="pEclat">
                 <div class="prduHead">
                     <div class="redux">
                         <p>-11%</p>
                     </div>
                     <div class="priceGame">
-                        <p>Featured</p>
+                        <p>Parfait-Éclat</p>
                     </div>
                 </div>
 
-                <img src="image/prod10.webp">
-                <a href="#">voir la gamme</a>
+                <img src="image/gamme1.png">
+                <a href="#">Acheter</a>
+                <div class="details">
+                    <h2>Lait corporel<br> Parfait-Éclat </h2>
+                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
+                </div>
+
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+
+                <div class="price">
+                    <span>XOF12.000</span>
+                    <p>XOF10.000</p>
+                </div>
+            </div>
+            <div class="product fliterDiv" data-item="pEclat">
+                <div class="prduHead">
+                    <div class="redux">
+                        <p>-11%</p>
+                    </div>
+                    <div class="priceGame">
+                        <p>Parfait-Éclat</p>
+                    </div>
+                </div>
+
+                <img src="image/gamme2.jpg">
+                <a href="#">Acheter</a>
+                <div class="details">
+                    <h2>Crème visage<br> Parfait-Éclat</h2>
+                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
+                </div>
+
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+
+                <div class="price">
+                    <span>XOF12.000</span>
+                    <p>XOF10.000</p>
+                </div>
+            </div>
+            <div class="product fliterDiv" data-item="pEclat">
+                <div class="prduHead">
+                    <div class="redux">
+                        <p>-11%</p>
+                    </div>
+                    <div class="priceGame">
+                        <p>Parfait-Éclat</p>
+                    </div>
+                </div>
+
+                <img src="image/gamme4.png">
+                <a href="#">Acheter</a>
+                <div class="details">
+                    <h2>Masque Visage<br> Parfait-Éclat</h2>
+                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
+                </div>
+
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+
+                <div class="price">
+                    <span>XOF12.000</span>
+                    <p>XOF10.000</p>
+                </div>
+            </div>
+            <div class="product fliterDiv" data-item="pEclat">
+                <div class="prduHead">
+                    <div class="redux">
+                        <p>-11%</p>
+                    </div>
+                    <div class="priceGame">
+                        <p>Parfait-Éclat</p>
+                    </div>
+                </div>
+
+                <img src="image/gamme3.jpg">
+                <a href="#">Acheter</a>
+                <div class="details">
+                    <h2>Papaye & Curcuma<br> Parfait-Éclat</h2>
+                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
+                </div>
+
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+
+                <div class="price">
+                    <span>XOF12.000</span>
+                    <p>XOF10.000</p>
+                </div>
+            </div>
+            <div class="product fliterDiv" data-item="pEclat">
+                <div class="prduHead">
+                    <div class="redux">
+                        <p>-11%</p>
+                    </div>
+                    <div class="priceGame">
+                        <p>Parfait-Éclat</p>
+                    </div>
+                </div>
+
+                <img src="image/gamme5.png">
+                <a href="#">Acheter</a>
+                <div class="details">
+                    <h2>Gommage Visage<br> Parfait-Éclat</h2>
+                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
+                </div>
+
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+
+                <div class="price">
+                    <span>XOF12.000</span>
+                    <p>XOF10.000</p>
+                </div>
+            </div>
+            <!---- END OF GAMME PARFAIT ECLAT-->
+
+            <div class="product fliterDiv" data-item="touspetits">
+                <div class="prduHead">
+                    <div class="redux">
+                        <p>-11%</p>
+                    </div>
+                    <div class="priceGame">
+                        <p>touspetits</p>
+                    </div>
+                </div>
+
+                <img src="image/gamme6.jpg">
+                <a href="#">Acheter</a>
+                <div class="details">
+                    <h2>Carrote & Abricot <br> Touspetits</h2>
+                    <p>la gamme touspetits est conçu pour .....</p>
+                </div>
+
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+
+                <div class="price">
+                    <span>XOF12.000</span>
+                    <p>XOF10.000</p>
+                </div>
+            </div>
+            <div class="product fliterDiv" data-item="touspetits">
+                <div class="prduHead">
+                    <div class="redux">
+                        <p>-11%</p>
+                    </div>
+                    <div class="priceGame">
+                        <p>touspetits</p>
+                    </div>
+                </div>
+
+                <img src="image/gamme7.png">
+                <a href="#">Acheter</a>
+                <div class="details">
+                    <h2>Lait Corps <br> Touspetits</h2>
+                    <p>la gamme touspetits est conçu pour .....</p>
+                </div>
+
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+
+                <div class="price">
+                    <span>XOF12.000</span>
+                    <p>XOF10.000</p>
+                </div>
+            </div>
+            <!---- END OF GAMME PARFAIT Touspetis-->
+            <div class="product fliterDiv" data-item="pEbene">
+                <div class="prduHead">
+                    <div class="redux">
+                        <p>-11%</p>
+                    </div>
+                    <div class="priceGame">
+                        <p>Parfait-Ebene</p>
+                    </div>
+                </div>
+
+                <img src="image/gamme8.png">
+                <a href="#">Acheter</a>
+                <div class="details">
+                    <h2>Lairs corps <br> Parfait Ebene</h2>
+                    <p>la gamme parfait ebene est conçu pour les peaux ....</p>
+                </div>
+
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+
+                <div class="price">
+                    <span>XOF12.000</span>
+                    <p>XOF10.000</p>
+                </div>
+            </div>
+            <div class="product fliterDiv" data-item="pEbene">
+                <div class="prduHead">
+                    <div class="redux">
+                        <p>-11%</p>
+                    </div>
+                    <div class="priceGame">
+                        <p>Parfait-Ebene</p>
+                    </div>
+                </div>
+
+                <img src="image/gamme9.png">
+                <a href="#">Acheter</a>
+                <div class="details">
+                    <h2>Savon Chocolat <br> Parfait Ebene</h2>
+                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
+                </div>
+
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+
+                <div class="price">
+                    <span>XOF12.000</span>
+                    <p>XOF10.000</p>
+                </div>
+            </div>
+            <div class="product fliterDiv" data-item="pEbene">
+                <div class="prduHead">
+                    <div class="redux">
+                        <p>-11%</p>
+                    </div>
+                    <div class="priceGame">
+                        <p>Parfait-Ebene</p>
+                    </div>
+                </div>
+
+                <img src="image/gamme10.png">
+                <a href="#">Acheter</a>
+                <div class="details">
+                    <h2>Crème visage <br> Parfait Ebène</h2>
+                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
+                </div>
+
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+
+                <div class="price">
+                    <span>XOF12.000</span>
+                    <p>XOF10.000</p>
+                </div>
+            </div>
+            <!---- END OF GAMME PARFAIT Parfait Ebebene-->
+
+            <div class="product fliterDiv" data-item="jouvence">
+                <div class="prduHead">
+                    <div class="redux">
+                        <p>-11%</p>
+                    </div>
+                    <div class="priceGame">
+                        <p>Jouvence</p>
+                    </div>
+                </div>
+
+                <img src="image/gamme11.png">
+                <a href="#">Acheter</a>
+                <div class="details">
+                    <h2>Lait corporel <br> Jouvence</h2>
+                    <p>la gamme jouvence est conçu pour les peaux clair</p>
+                </div>
+
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+
+                <div class="price">
+                    <span>XOF12.000</span>
+                    <p>XOF10.000</p>
+                </div>
+            </div>
+            <div class="product fliterDiv" data-item="jouvence">
+                <div class="prduHead">
+                    <div class="redux">
+                        <p>-11%</p>
+                    </div>
+                    <div class="priceGame">
+                        <p>Jouvence</p>
+                    </div>
+                </div>
+
+                <img src="image/gamme12.png">
+                <a href="#">Acheter</a>
                 <div class="details">
                     <h2>Gamme <br> Parfait Eclat</h2>
                     <p>la gamme parfait éclat est conçu pour les peaux clair</p>
@@ -96,390 +473,305 @@
                     <p>XOF10.000</p>
                 </div>
             </div>
-            <div class="product fliterDiv" data-item="Featured">
-                <div class="prduHead">
-                    <div class="redux">
-                        <p>-11%</p>
-                    </div>
-                    <div class="priceGame">
-                        <p>Featured</p>
-                    </div>
-                </div>
 
-                <img src="image/prod9.webp">
-                <a href="#">voir la gamme</a>
-                <div class="details">
-                    <h2>Gamme <br> Parfait Eclat</h2>
-                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
-                </div>
-
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star-half'></i>
-                </div>
-
-                <div class="price">
-                    <span>XOF12.000</span>
-                    <p>XOF10.000</p>
-                </div>
-            </div>
-            <div class="product fliterDiv" data-item="Featured">
-                <div class="prduHead">
-                    <div class="redux">
-                        <p>-11%</p>
-                    </div>
-                    <div class="priceGame">
-                        <p>Featured</p>
-                    </div>
-                </div>
-
-                <img src="image/prod.webp">
-                <a href="#">voir la gamme</a>
-                <div class="details">
-                    <h2>Gamme <br> Parfait Eclat</h2>
-                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
-                </div>
-
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star-half'></i>
-                </div>
-
-                <div class="price">
-                    <span>XOF12.000</span>
-                    <p>XOF10.000</p>
-                </div>
-            </div>
-
-            <div class="product fliterDiv" data-item="Category">
-                <div class="prduHead">
-                    <div class="redux">
-                        <p>-11%</p>
-                    </div>
-                    <div class="priceGame">
-                        <p>Category</p>
-                    </div>
-                </div>
-
-                <img src="image/prod2.webp">
-                <a href="#">voir la gamme</a>
-                <div class="details">
-                    <h2>Gamme <br> Parfait Eclat</h2>
-                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
-                </div>
-
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star-half'></i>
-                </div>
-
-                <div class="price">
-                    <span>XOF12.000</span>
-                    <p>XOF10.000</p>
-                </div>
-            </div>
-
-            <div class="product fliterDiv" data-item="Popular">
-                <div class="prduHead">
-                    <div class="redux">
-                        <p>-11%</p>
-                    </div>
-                    <div class="priceGame">
-                        <p>Featured</p>
-                    </div>
-                </div>
-
-                <img src="image/prod3.webp">
-                <a href="#">voir la gamme</a>
-                <div class="details">
-                    <h2>Gamme <br> Parfait Eclat</h2>
-                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
-                </div>
-
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star-half'></i>
-                </div>
-
-                <div class="price">
-                    <span>XOF12.000</span>
-                    <p>XOF10.000</p>
-                </div>
-            </div>
-            <div class="product fliterDiv" data-item="Popular">
-                <div class="prduHead">
-                    <div class="redux">
-                        <p>-11%</p>
-                    </div>
-                    <div class="priceGame">
-                        <p>Featured</p>
-                    </div>
-                </div>
-
-                <img src="image/prod4.webp">
-                <a href="#">voir la gamme</a>
-                <div class="details">
-                    <h2>Gamme <br> Parfait Eclat</h2>
-                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
-                </div>
-
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star-half'></i>
-                </div>
-
-                <div class="price">
-                    <span>XOF12.000</span>
-                    <p>XOF10.000</p>
-                </div>
-            </div>
-            <div class="product fliterDiv" data-item="Popular">
-                <div class="prduHead">
-                    <div class="redux">
-                        <p>-11%</p>
-                    </div>
-                    <div class="priceGame">
-                        <p>Featured</p>
-                    </div>
-                </div>
-
-                <img src="image/prod5.webp">
-                <a href="#">voir la gamme</a>
-                <div class="details">
-                    <h2>Gamme <br> Parfait Eclat</h2>
-                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
-                </div>
-
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star-half'></i>
-                </div>
-
-                <div class="price">
-                    <span>XOF12.000</span>
-                    <p>XOF10.000</p>
-                </div>
-            </div>
-            <div class="product fliterDiv" data-item="Popular">
-                <div class="prduHead">
-                    <div class="redux">
-                        <p>-11%</p>
-                    </div>
-                    <div class="priceGame">
-                        <p>Featured</p>
-                    </div>
-                </div>
-
-                <img src="image/prod6.webp">
-                <a href="#">voir la gamme</a>
-                <div class="details">
-                    <h2>Gamme <br> Parfait Eclat</h2>
-                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
-                </div>
-
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star-half'></i>
-                </div>
-
-                <div class="price">
-                    <span>XOF12.000</span>
-                    <p>XOF10.000</p>
-                </div>
-            </div>
-
-            <div class="product fliterDiv" data-item="Brand">
-                <div class="prduHead">
-                    <div class="redux">
-                        <p>-11%</p>
-                    </div>
-                    <div class="priceGame">
-                        <p>Featured</p>
-                    </div>
-                </div>
-
-                <img src="image/prod4.webp">
-                <a href="#">voir la gamme</a>
-                <div class="details">
-                    <h2>Gamme <br> Parfait Eclat</h2>
-                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
-                </div>
-
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star-half'></i>
-                </div>
-
-                <div class="price">
-                    <span>XOF12.000</span>
-                    <p>XOF10.000</p>
-                </div>
-            </div>
-            <div class="product fliterDiv" data-item="Brand">
-                <div class="prduHead">
-                    <div class="redux">
-                        <p>-11%</p>
-                    </div>
-                    <div class="priceGame">
-                        <p>Featured</p>
-                    </div>
-                </div>
-
-                <img src="image/prod6.webp">
-                <a href="#">voir la gamme</a>
-                <div class="details">
-                    <h2>Gamme <br> Parfait Eclat</h2>
-                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
-                </div>
-
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star-half'></i>
-                </div>
-
-                <div class="price">
-                    <span>XOF12.000</span>
-                    <p>XOF10.000</p>
-                </div>
-            </div>
-            <div class="product fliterDiv" data-item="Brand">
-                <div class="prduHead">
-                    <div class="redux">
-                        <p>-11%</p>
-                    </div>
-                    <div class="priceGame">
-                        <p>Featured</p>
-                    </div>
-                </div>
-
-                <img src="image/prod8.webp">
-                <a href="#">voir la gamme</a>
-                <div class="details">
-                    <h2>Gamme <br> Parfait Eclat</h2>
-                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
-                </div>
-
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star-half'></i>
-                </div>
-
-                <div class="price">
-                    <span>XOF12.000</span>
-                    <p>XOF10.000</p>
-                </div>
-            </div>
-
-            <div class="product fliterDiv" data-item="Category">
-                <div class="prduHead">
-                    <div class="redux">
-                        <p>-11%</p>
-                    </div>
-                    <div class="priceGame">
-                        <p>Category</p>
-                    </div>
-                </div>
-
-                <img src="image/prod7.webp">
-                <a href="#">voir la gamme</a>
-                <div class="details">
-                    <h2>Gamme <br> Parfait Eclat</h2>
-                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
-                </div>
-
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star-half'></i>
-                </div>
-
-                <div class="price">
-                    <span>XOF12.000</span>
-                    <p>XOF10.000</p>
-                </div>
-            </div>
-
-            <div class="product fliterDiv" data-item="Category">
-                <div class="prduHead">
-                    <div class="redux">
-                        <p>-11%</p>
-                    </div>
-                    <div class="priceGame">
-                        <p>Category</p>
-                    </div>
-                </div>
-
-                <img src="image/prod5.webp">
-                <a href="#">voir la gamme</a>
-                <div class="details">
-                    <h2>Gamme <br> Parfait Eclat</h2>
-                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
-                </div>
-
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star-half'></i>
-                </div>
-
-                <div class="price">
-                    <span>XOF12.000</span>
-                    <p>XOF10.000</p>
-                </div>
-            </div>
-            <div class="product fliterDiv" data-item="Category">
-                <div class="prduHead">
-                    <div class="redux">
-                        <p>-11%</p>
-                    </div>
-                    <div class="priceGame">
-                        <p>Category</p>
-                    </div>
-                </div>
-
-                <img src="image/prod5.webp">
-                <a href="#">voir la gamme</a>
-                <div class="details">
-                    <h2>Gamme <br> Parfait Eclat</h2>
-                    <p>la gamme parfait éclat est conçu pour les peaux clair</p>
-                </div>
-
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star-half'></i>
-                </div>
-
-                <div class="price">
-                    <span>XOF12.000</span>
-                    <p>XOF10.000</p>
-                </div>
-            </div>
 
         </div>
+
+        <!----
+        <section class="gamme_products topcontent">
+            <ul id="autoWidth" class="cs-hidden filter-item snaps-inline">
+                
+                <li class="item-a fliterDiv" data-item="pEclat">
+                    <div class="product ">
+                        <div class="prduHead">
+                            <div class="redux">
+                                <p>-11%</p>
+                            </div>
+                            <div class="priceGame">
+                                <p>Parfait-Éclat</p>
+                            </div>
+                        </div>
+
+                        <img src="image/gamme1.png">
+                        <a href="#">voir la gamme</a>
+                        <div class="details">
+                            <h2>Lait corporel<br> Parfait-Éclat </h2>
+                            <p>la gamme parfait éclat est conçu pour les peaux clair</p>
+                        </div>
+
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </div>
+
+                        <div class="price">
+                            <span>XOF12.000</span>
+                            <p>XOF10.000</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-b fliterDiv" data-item="pEclat">
+                    <div class="product ">
+                        <div class="prduHead">
+                            <div class="redux">
+                                <p>-11%</p>
+                            </div>
+                            <div class="priceGame">
+                                <p>Parfait-Éclat</p>
+                            </div>
+                        </div>
+
+                        <img src="image/gamme2.jpg">
+                        <a href="#">voir la gamme</a>
+                        <div class="details">
+                            <h2>Crème visage<br> Parfait-Éclat</h2>
+                            <p>la gamme parfait éclat est conçu pour les peaux clair</p>
+                        </div>
+
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </div>
+
+                        <div class="price">
+                            <span>XOF12.000</span>
+                            <p>XOF10.000</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-c fliterDiv" data-item="pEclat">
+
+                    <div class="product">
+                        <div class="prduHead">
+                            <div class="redux">
+                                <p>-11%</p>
+                            </div>
+                            <div class="priceGame">
+                                <p>Parfait-Éclat</p>
+                            </div>
+                        </div>
+
+                        <img src="image/gamme3.jpg">
+                        <a href="#">voir la gamme</a>
+                        <div class="details">
+                            <h2>Papaye & Curcuma<br> Parfait-Éclat</h2>
+                            <p>la gamme parfait éclat est conçu pour les peaux clair</p>
+                        </div>
+
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </div>
+
+                        <div class="price">
+                            <span>XOF12.000</span>
+                            <p>XOF10.000</p>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="item-c fliterDiv" data-item="pEclat">
+
+                    <div class="product">
+                        <div class="prduHead">
+                            <div class="redux">
+                                <p>-11%</p>
+                            </div>
+                            <div class="priceGame">
+                                <p>Parfait-Éclat</p>
+                            </div>
+                        </div>
+
+                        <img src="image/gamme5.png">
+                        <a href="#">voir la gamme</a>
+                        <div class="details">
+                            <h2>Gommage Visage<br> Parfait-Éclat</h2>
+                            <p>la gamme parfait éclat est conçu pour les peaux clair</p>
+                        </div>
+
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </div>
+
+                        <div class="price">
+                            <span>XOF12.000</span>
+                            <p>XOF10.000</p>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="item-c fliterDiv" data-item="pEclat">
+
+                    <div class="product">
+                        <div class="prduHead">
+                            <div class="redux">
+                                <p>-11%</p>
+                            </div>
+                            <div class="priceGame">
+                                <p>Parfait-Éclat</p>
+                            </div>
+                        </div>
+
+                        <img src="image/gamme4.png">
+                        <a href="#">voir la gamme</a>
+                        <div class="details">
+                            <h2>Masque Visage<br> Parfait-Éclat</h2>
+                            <p>la gamme parfait éclat est conçu pour les peaux clair</p>
+                        </div>
+
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </div>
+
+                        <div class="price">
+                            <span>XOF12.000</span>
+                            <p>XOF10.000</p>
+                        </div>
+                    </div>
+
+                </li>
+                
+                <li class="item-d fliterDiv" data-item="pEbene">
+                    <div class="product">
+                        <div class="prduHead">
+                            <div class="redux">
+                                <p>-11%</p>
+                            </div>
+                            <div class="priceGame">
+                                <p>touspetits</p>
+                            </div>
+                        </div>
+
+                        <img src="image/prod2.webp">
+                        <a href="#">voir la gamme</a>
+                        <div class="details">
+                            <h2>Gamme <br> Parfait Eclat</h2>
+                            <p>la gamme parfait éclat est conçu pour les peaux clair</p>
+                        </div>
+
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </div>
+
+                        <div class="price">
+                            <span>XOF12.000</span>
+                            <p>XOF10.000</p>
+                        </div>
+                    </div>
+                </li>
+               
+                <li class="item-e fliterDiv" data-item="touspetits">
+                    <div class="product ">
+                        <div class="prduHead">
+                            <div class="redux">
+                                <p>-11%</p>
+                            </div>
+                            <div class="priceGame">
+                                <p>pEclat</p>
+                            </div>
+                        </div>
+
+                        <img src="image/prod4.webp">
+                        <a href="#">voir la gamme</a>
+                        <div class="details">
+                            <h2>Gamme <br> Parfait Eclat</h2>
+                            <p>la gamme parfait éclat est conçu pour les peaux clair</p>
+                        </div>
+
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </div>
+
+                        <div class="price">
+                            <span>XOF12.000</span>
+                            <p>XOF10.000</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-f fliterDiv" data-item="touspetits">
+                    <div class="product ">
+                        <div class="prduHead">
+                            <div class="redux">
+                                <p>-11%</p>
+                            </div>
+                            <div class="priceGame">
+                                <p>pEclat</p>
+                            </div>
+                        </div>
+
+                        <img src="image/prod4.webp">
+                        <a href="#">voir la gamme</a>
+                        <div class="details">
+                            <h2>Gamme <br> Parfait Eclat</h2>
+                            <p>la gamme parfait éclat est conçu pour les peaux clair</p>
+                        </div>
+
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </div>
+
+                        <div class="price">
+                            <span>XOF12.000</span>
+                            <p>XOF10.000</p>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="item-g fliterDiv" data-item="jouvence">
+                    <div class="product">
+                        <div class="prduHead">
+                            <div class="redux">
+                                <p>-11%</p>
+                            </div>
+                            <div class="priceGame">
+                                <p>pEclat</p>
+                            </div>
+                        </div>
+
+                        <img src="image/prod4.webp">
+                        <a href="#">voir la gamme</a>
+                        <div class="details">
+                            <h2>Gamme <br> Parfait Eclat</h2>
+                            <p>la gamme parfait éclat est conçu pour les peaux clair</p>
+                        </div>
+
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </div>
+
+                        <div class="price">
+                            <span>XOF12.000</span>
+                            <p>XOF10.000</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+-->
     </section>
 
     <!---- MEILLEURS PRODUITS-->
@@ -487,7 +779,7 @@
         <div class="bestProducts">
             <div class="bestimage">
                 <div class="bestINfors">
-                    <h2>Je connais ma <br> <span>peau</span></h2>
+                    <h2>Nos Produits <br> <span>PHARES</span></h2>
                     <a href="#">voir plus</a>
                 </div>
             </div>
@@ -528,23 +820,30 @@
         <div class="about-section">
             <div class="about_image"></div>
             <div class="about_info">
-                <span>New Collection</span>
-                <h2>Pink Queen</h2>
+                <span>POURQUOI ?</span>
+                <h2>De la passion et du désir de sublimer est née AllianzNature.</h2>
                 <div>
                     <article>
-                        Days waters our open Deep itself third fill together you created you waters there tree. Upon
-                        saying
-                        creeping fruitful place, god, years whales a life, female was brought So it land them in unto
-                        male
-                        great.
+                        Créée, le <strong>19 Septembre 2020</strong> à travers un lancement officiel et une vente
+                        privée, et
+                        dans le soucis de
+                        révéler la beauté de la peau noire, AllianzNature se veut être la marque africaine de
+                        cosmétiques
+                        naturels adaptée aux peaux noire et métissée.
                     </article>
                     <article>
-                        Second after called evening may won't evening them his bring. Days. Itself upon moved light one
-                        created is let first let set beast to a, greater face subdue their, brought after male fruitful
-                        together Is let saying spirit in after you there.
+                        Aujourd'hui je peux prétendre avoir trouvé une solution à mes boutons d'acnés grâce au Pack
+                        Anti-acné de
+                        AllianzNature que je me ferai un plaisir de partager avec toutes ces personnes qui passent par
+                        cette
+                        phase difficile et profiter, pour vous faire découvrir les joyaux que nous permet de créer, la
+                        nature...
+
                     </article>
                 </div>
+                <!---
                 <a href="#">Lire la suite</a>
+                -->
             </div>
         </div>
     </section>
@@ -552,23 +851,26 @@
     <section class="containerAbot">
         <div class="about-section about_2">
             <div class="about_info">
-                <span>New Collection</span>
-                <h2>Pink Queen</h2>
+                <span>AllianzNature</span>
+                <h2>Notre passion prendre soin de votre peau</h2>
                 <div>
                     <article>
-                        Days waters our open Deep itself third fill together you created you waters there tree. Upon
-                        saying
-                        creeping fruitful place, god, years whales a life, female was brought So it land them in unto
-                        male
-                        great.
+
+                        Pour la petite histoire j'ai toujours été passionnée de cosmétiques naturels étant issue d'une
+                        petite
+                        famille de 3 filles.
+                        Alors que l'adolescence a été pour moi topissime, je n'en dirai pas autant de ma période post
+                        maternité
+                        où j'ai réellement connu les fameux "boutons d'acnés" qui ma foi, ont développé en moi un réel
+                        sentiment
+                        de mal-être.
                     </article>
                     <article>
-                        Second after called evening may won't evening them his bring. Days. Itself upon moved light one
-                        created is let first let set beast to a, greater face subdue their, brought after male fruitful
-                        together Is let saying spirit in after you there.
+                        J'ai donc décidé, d'explorer l'univers du naturel, bio pour régler ce problème crucial qui me
+                        hantait
                     </article>
                 </div>
-                <a href="#">Lire la suite</a>
+                <a href="#">Notre Marque</a>
             </div>
             <div class="about_image about2"></div>
         </div>
@@ -579,7 +881,7 @@
         <div class="bestProducts">
             <div class="bestimage testimonials">
                 <div class="bestINfors">
-                    <h2>Je connais ma <br> <span>peau</span></h2>
+                    <h2>Notre <br> <span>Magazine</span></h2>
                     <a href="#">voir plus</a>
                 </div>
             </div>
@@ -587,33 +889,273 @@
         <div class="bestProducts">
             <div class="bestimage testimonials2">
                 <div class="bestINfors">
-                    <h2>Je connais ma <br> <span>peau</span></h2>
-                    <a href="#">voir plus</a>
+                    <h2>Compose ton propre <br> <span> savon</span></h2>
+                    <a href="#">Bientôt</a>
                 </div>
             </div>
         </div>
 
     </section>
-    <!----- VENTES FLASH-->
-    <section class="ventesFlash">
-        <div class="flash">
-            <i class='bx bx-gift'></i>
-            <p>LIVRAISONS à VOTRE COMPTE </p>
-            <span>Passez votre commande et faites vous livrez n'importe où nationale et internationale</span>
+
+    <!----- TEMOIGNAGES-->
+    <section class="swiper mySwiper">
+        <div class="témoin-titre">
+            <h2>Témoignages</h2>
         </div>
-        <div class="flash">
-            <i class='bx bx-support'></i>
-            <p>
-                Assistance 24h/24 et 6j/7 </p>
-            <span>Besoin d'assistance. <br> Nous sommes ouvert du Lundi au Samedi de 09h18. </span>
+        <div class="swiper-wrapper">
+            <article class="swiper-slide">
+                <p>
+                    J'ai essayé le savon au moringa et à la menthe poivrée après m'être rasé... Waooooo rien à voir
+                    avec
+                    une mousse à raser. C'est clean et rafrîchissant, je profite pour lancer ma commande de 500g...
+                </p>
+                <div class="patient">
+                    <div class="avatar">
+                        <img src="./image/avatar_homme.jpg" alt="Patients one" />
+                    </div>
+                    <div class="aptient__details">
+                        <h5>Ghyslain F.</h5>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <p>
+                    J'ai une peau sensible. J'ai essayé le savon papaye-curcuma de la gamme Parfait Éclat et j'ai senti
+                    ma peau douce et hydratée. En plus de celà, j'ai retrouvé l'éclat de mon teint et le savon a
+                    cicatrisé les petits boutons que j'avais sur mon visage, j'adore.
+                </p>
+                <div class="patient">
+                    <div class="avatar">
+                        <img src="./image/avatar_femme.jpg" alt="Patients Four" />
+                    </div>
+                    <div class="aptient__details">
+                        <h5>Epiphania G.</h5>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <p>
+                    Je n'ai pas su me retenir face à l'odeur enivrante du savont chocolat. Tellement il sentait bon
+                    que
+                    c'est une fois sur ma langue je me suis rappelé que ce n'était pas du chocolat comestible mais
+                    plutôt du savon au chocolat. Oh là là AllianzNature vous me faites faire des choses...
+                </p>
+                <div class="patient">
+                    <div class="avatar">
+                        <img src="./image/avatar_homme.jpg" alt="Patients two" />
+                    </div>
+                    <div class="aptient__details">
+                        <h5>Mike B.</h5>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <p>
+                    J'ai essayé le savon chocolat de AllianzNature qui a débarrassé mon visage des tâches, nettoyé
+                    et
+                    rafraîchit ma peau, en plus j'aime particulièrement son odeur de chocolat.
+                </p>
+                <div class="patient">
+                    <div class="avatar">
+                        <img src="./image/avatar_homme.jpg" alt="Patients three" />
+                    </div>
+                    <div class="aptient__details">
+                        <h5>Abdul K.</h5>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <p>
+                    J'avais des tâches pigmentaires sur les jambes à cause des boutons de moustique et je faisais
+                    également de l'acné sur certaines parties
+                    du corps, j'ai testé le lait parfait ébène et j'ai commencé à voir une nette amélioration au
+                    niveau des tâches. Puis à ma grande suprise une réelle diminution des poussées de boutons d'acné
+                    sur mon corps, la rendant lisse. De plus, je trouve son parfum envoutant.
+                </p>
+                <div class="patient">
+                    <div class="avatar">
+                        <img src="./image/avatar_femme.jpg" alt="Patients Five" />
+                    </div>
+                    <div class="aptient__details">
+                        <h5>Sindy B.</h5>
+                    </div>
+                </div>
+            </article>
+
         </div>
-        <div class="flash">
-            <i class='bx bx-reset'></i>
-            <p>Satisfait ou Rembourser </p>
-            <span>Une fois le colis reçu vous avez 72h pour retourner le produit et être rembourser. </span>
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <!---- DISTRIBUTEURS-->
+    <section class="bestof">
+        <div class="bestProducts">
+            <div class="bestimage distributeurs">
+                <div class="bestINfors">
+                    <h2>Devenez <br> <span>Distributeurs</span></h2>
+                    <p>Vous souhaitez devenir un distributeur pour AllianzNature</p>
+                    <a href="#">contactez-nous</a>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!----- Partenaires -->
+    <section class="partenaires_container">
+        <div class="partner">
+            <img src="image/partenaires1.png" alt="">
+        </div>
+        <div class="partner">
+            <img src="image/partenaires2.png" alt="">
+        </div>
+        <div class="partner">
+            <img src="image/partenaires3.png" alt="">
+        </div>
+        <div class="partner">
+            <img src="image/partenaires4.png" alt="">
+        </div>
+    </section>
+    <!----Galerie-->
+    <section class="galerie_section">
+        <div class="gal galerie">
+        </div>
+
+        <div class="gal galerie2">
+        </div>
+
+        <div class="gal galerie3">
+        </div>
+    </section>
+
+    <!----- POINTS DE VENTES ------>
+    <section class="pointsVentes">
+        <h2>Points de Vente</h2>
+        <div class="points">
+            <a href="https://goo.gl/maps/NmbYyD16XpQaVBeK9" target="_blank" class="ventes-btn">
+                <i class='bx bxs-location-plus'></i>
+                <h2>Les essences d'Essi, <span>(Cotonou)</span></h2>
+
+            </a>
+            <a href="https://goo.gl/maps/mUkjTTLqMdRBQGsJ6" target="_blank" class="ventes-btn">
+                <i class='bx bxs-location-plus'></i>
+                <h2>michelledeguemon <br><span>(Face home Residence)</span></h2>
+            </a>
+            <a href="https://g.page/omanipatisserie?share" target="_blank" class="ventes-btn">
+                <i class='bx bxs-location-plus'></i>
+                <h2>OMANI, <span>(Qtier les cocotiers</span></h2>
+            </a>
+            <a href="https://goo.gl/maps/PsQzsdsEvWG55kY79" target="_blank" class="ventes-btn">
+                <i class='bx bxs-location-plus'></i>
+                <h2>Galerie Interluro <span>(Haie vive)</span> </h2>
+            </a>
+            <a href="https://goo.gl/maps/V1wQ2EB5Q3Z67hMm6" target="_blank" class="ventes-btn">
+                <i class='bx bxs-location-plus'></i>
+                <h2>Mod'ukpè <span>(Agla)</span></h2>
+            </a>
+            <a href="https://goo.gl/maps/x3R97js34Xwt5LtGA" target="_blank" class="ventes-btn">
+                <i class='bx bxs-location-plus'></i>
+                <h2>Galerie 4 Saisons<span>(Agla Pylônes)</span></h2>
+            </a>
+            <a href="https://goo.gl/maps/8DFR7Q8hVyiBuVe1A" target="_blank" class="ventes-btn">
+                <i class='bx bxs-location-plus'></i>
+                <h2>Mamika <span>(Agontikon)</span></h2>
+            </a>
+        </div>
+    </section>
+
+    <section class="newsletters">
+        <div class="infoNewsle">
+            <div>
+                <img src="image/newsletters.svg" alt="">
+                <p> ABONNEZ-VOUS <br> À NOTRE <br> NEWSLETTER</p>
+            </div>
+            <span>Recevez les dernières nouvelles, offres et réductions.</span>
+            <form action="">
+                <input type="email" placeholder="Votre Email" required>
+                <button>S'ABONNER</button>
+            </form>
+        </div>
+        <div class="imaNewslette"></div>
+    </section>
+
+    <footer class="footer_section">
+        <ul>
+            <li><a href="#">Notre Marque</a></li>
+            <li><a href="#"> Services</a></li>
+            <li><a href="#">Produits</a></li>
+            <li><a href="#">Magazine</a></li>
+            <li><a href="#">Contactez-nous</a></li>
+        </ul>
+        <div class="footer_info">
+            <div class="left">
+                <a href="tel:+22954333808" target="_blank">
+                    <i class='bx bx-phone'></i> +229 543 338 08
+                </a>
+                <a href="https://goo.gl/maps/7XUqvqHSK9wayMmn7" target="_blank">
+                    <i class='bx bx-location-plus'></i>
+                    03bp 732 Allianznature, Cotonou
+                </a>
+                <a href="mailto:allianznature@gmail.com" target="_blank">
+                    <i class='bx bx-envelope'></i>
+                    allianznature@gmail.com
+                </a>
+                <small>
+                    <i class='bx bx-time-five'></i>
+                    Lund-Sam: 08:00-18:00
+                </small>
+            </div>
+            <div class="center">
+                <img src="image/LOGO C.png" alt="">
+                <div class="resaux">
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                </div>
+            </div>
+            <div class="right">
+                <p>
+                    AllianzNature, notre passion prendre soin de votre peau. <br>
+                    Pour rendre votre peau belle comme du velours et irrésistible au toucher, nous disposons d'une gamme
+                    complète de produits de soins corporels fabriqués avec passion.</p>
+                <a href="#">Disponible ici</a>
+            </div>
+        </div>
+        <span>&copy;2022 AllianzNature. Créée par : <a href="http://simpleit.bj/" target="_blank">SIMPLE IT</a></span>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // JavaScript Document
+        $(document).ready(function () {
+            $('#autoWidth').lightSlider({
+                autoWidth: true,
+                loop: true,
+                onSliderLoad: function () {
+                    $('#autoWidth').removeClass('cS-hidden');
+                }
+            });
+        });
+
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="js/main.js"></script>
 </body>
