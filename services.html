@@ -74,7 +74,7 @@
                 osent sortir peau
                 nue.
                 <br>
-                <a href="#">Je découvre ma peau</a>
+                <a href="#quizz">Je découvre ma peau</a>
             </article>
         </div>
     </section>
@@ -89,6 +89,143 @@
         <div class="gal galerie3">
         </div>
     </section>
+
+
+    <!--------- QUIZZZ --------------------------->
+    <section class="form_quizz" id="quizz">
+        <form action="https://formspree.io/f/xrgdewkd" method="post">
+            <div class="profil_info">
+                <div class="from__group">
+                    <label for="name">Nom</label>
+                    <input type="text" placeholder="Entrer votre nom" name="Nom du client" id="name" required />
+                </div>
+                <div class="from__group">
+                    <label for="phone">Numéro de Tél.</label>
+                    <input type="number" placeholder="Entrer votre numéro de Téléphone" name="Numéro du client"
+                        id="phone" required />
+                </div>
+                <div class="from__group">
+                    <label for="email">E-mail</label>
+                    <input type="email" placeholder="Entrer votre E-mail" name="E-mail" id="email" required />
+                </div>
+            </div>
+            <div class="profil_quizz">
+
+                <div class="from__group">
+                    <label for="style">Quel est votre style de vie ?</label>
+                    <select name="Quel est votre style de vie ?" id="style" required>
+                        <option value="Boulot - Manger - Dodo">Boulot - Manger - Dodo</option>
+                        <option value="Boulot - Manger - Sport">Boulot - Manger - Sport</option>
+                        <option value="Vaccances - Manger - Dodo">Vaccances - Manger - Dodo</option>
+                    </select>
+                </div>
+                <div class="from__group">
+                    <label for="age">Quel est votre âge ?</label>
+                    <select name="Quel est votre âge ?" id="age" required>
+                        <option value="Moins de 25 ans">Moins de 25 ans</option>
+                        <option value="25 - 35">25 - 35</option>
+                        <option value="35 - 45">35 - 45</option>
+                        <option value="45 - 55">45 - 55</option>
+                        <option value="55 - 65">55 - 65</option>
+                        <option value="plus de 65">plus de 65</option>
+                    </select>
+                </div>
+                <div class="from__group">
+                    <label for="alimentation">Votre alimentation est composée de quoi ?</label>
+                    <select name="Votre alimentation est composée de quoi ?" id="alimentation" required>
+                        <option value="Protéïnes - Céréales">Protéïnes - Céréales</option>
+                        <option value="Céréales - Fruits">Céréales - Fruits</option>
+                        <option value="Légumes - Tubercules">Légumes - Tubercules</option>
+                    </select>
+                </div>
+                <div class="from__group">
+                    <label for="sport">Combien de fois faites vous le sport par semaine </label>
+                    <select name="Combien de fois faites vous le sport par semaine" id="sport" required>
+                        <option value="1 fois par semaine">1 fois par semaine</option>
+                        <option value="Tous les jours">Tous les jours</option>
+                        <option value="Jamais">Jamais</option>
+                    </select>
+                </div>
+                <div class="from__group">
+                    <label for="eau">Quelle quantité d'eau buvez-vous par jour ? </label>
+                    <select name="Quelle quantité d'eau buvez-vous par jour ?" id="eau" required>
+                        <option value="Moins d'1L">Moins d'1L</option>
+                        <option value="1,5L">1,5L</option>
+                        <option value="3L">3L</option>
+                    </select>
+                </div>
+                <div class="from__group">
+                    <label for="stress">Avez-vous une vie stressante ? </label>
+                    <select name="Avez-vous une vie stressante ?" id="stress" required>
+                        <option value="Un peu">Un peu</option>
+                        <option value="Beaucoup">Beaucoup</option>
+                        <option value="Pas du tout">Pas du tout</option>
+                    </select>
+                </div>
+                <div class="from__group">
+                    <label for="maquiallage">A quelle fréquence vous maquillez vous ? </label>
+                    <select name="A quelle fréquence vous vous maquillez ?" id="maquiallage" required>
+                        <option value="Tous les jours">Tous les jours</option>
+                        <option value="Occasionnelement">Occasionnelement</option>
+                        <option value="Jamais">Jamais</option>
+                    </select>
+                </div>
+                <div class="from__group">
+                    <label for="problématique">Quelle est la problématique de votre peau </label>
+                    <select name="Le quelle est la problématique de votre excès de peau" id="problématique" required>
+                        <option value="Excès de sebum">Excès de sebum</option>
+                        <option value="Rides">Rides</option>
+                        <option value="Tâches Pigmentaires">Tâches Pigmentaires</option>
+                        <option value="Dartes">Dartes</option>
+                        <option value="Points Noires">Points Noires</option>
+                        <option value="Acné">Acné</option>
+                        <option value="Tiraillement">Tiraillement</option>
+                        <option value="ezémas, psoniasis">ezémas, psoniasis</option>
+                        <option value="Autres imperfections">Autres imperfections</option>
+                        <option value="Aucunes">Aucunes</option>
+                    </select>
+                </div>
+                <div class="from__group">
+                    <label for="peau">Quelle est votre couleur de peau ?</label>
+                    <select name="Quelle est votre couleur de peau ?" id="peau" required>
+                        <option value="Noire Ebène">Noire Ebène </option>
+                        <option value="Bronzée">Bronzée</option>
+                        <option value="Claire / Métissée">Claire / Métissée</option>
+                    </select>
+                </div>
+                <div class="from__group">
+                    <label for="allergies">Faites vous des allergies ou êtes vous enceintes</label>
+                    <select name="Faites vous des allergies ou êtes vous enceintes" id="allergies" required>
+                        <option value="Oui">Oui </option>
+                        <option value="Non">Non</option>
+                    </select>
+                </div>
+                <div class="from__group">
+                    <label for="details">Quelles sont vos allergies ?</label>
+                    <select name="Quelles sont vos allergies ?" id="details" required>
+                        <option value="Aloe Vera">Aloe Vera </option>
+                        <option value="Parfum">Parfum</option>
+                        <option value="Huiles essembilles">Huiles essembilles</option>
+                        <option value="Autres">Autres</option>
+                    </select>
+                </div>
+            </div>
+            <div class="message_group">
+                <label for="message">Dites nous des choses que nous devons savoir sur votre peau</label>
+                <textarea name=" Message" id="message" rows="6" placeholder="Entrez votre message" required></textarea>
+            </div>
+            <input type="submit" value="Envoyer" class="btn-primary" />
+        </form>
+
+
+    </section>
+
+    <div class="compoition_savons" id="composeSavon">
+
+        <img src="image/banner15.png">
+
+    </div>
+
 
 
 
